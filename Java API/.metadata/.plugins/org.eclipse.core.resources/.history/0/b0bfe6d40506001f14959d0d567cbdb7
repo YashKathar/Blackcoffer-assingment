@@ -1,0 +1,78 @@
+package com.blackcoffer.controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.blackcoffer.Pojo.DataTest;
+import com.blackcoffer.service.IDataTest;
+
+@RestController
+@RequestMapping("/api/data/")
+public class DataTestController {
+	
+	@Autowired
+	private IDataTest datatest;
+	
+	@GetMapping("getalldata")
+	public List<DataTest> getAllData(){
+		return datatest.getAllData();
+	}
+	
+	@GetMapping("getdatabyid/{id}")
+	public Optional<DataTest> getDataById(@PathVariable ("id") Integer ID) {
+		return datatest.getDataById(ID);
+	}
+	
+	@GetMapping("getdatabyend_year/{end_year}")
+	public List<DataTest> getDataByEndYear(@PathVariable ("end_year") Integer endYear) {
+		return datatest.getDataByEndYear(endYear);
+	}
+	
+	@GetMapping("getdatabytopic/{topic}")
+	public List<DataTest> getDataByTopic(@PathVariable ("topic") String topic) {
+		return datatest.getDataByTopics(topic);
+	}
+	
+	@GetMapping("getdatabycity/{city}")
+	public List<DataTest> getDataByCity(@PathVariable ("city") String city) {
+		return datatest.getDataByCity(city);
+	}
+	
+	@GetMapping("getdatabycountry/{country}")
+	public List<DataTest> getDataByCountry(@PathVariable ("country") String country) {
+		return datatest.getDataByCountry(country);
+	}
+	
+	@GetMapping("getdatabyend_year/{end_year}")
+	public List<DataTest> getDataByEndYear(@PathVariable ("end_year") Integer endYear) {
+		return datatest.getDataByEndYear(endYear);
+	}
+	
+	@GetMapping("getdatabyend_year/{end_year}")
+	public List<DataTest> getDataByEndYear(@PathVariable ("end_year") Integer endYear) {
+		return datatest.getDataByEndYear(endYear);
+	}
+	
+	@GetMapping("getdatabyend_year/{end_year}")
+	public List<DataTest> getDataByEndYear(@PathVariable ("end_year") Integer endYear) {
+		return datatest.getDataByEndYear(endYear);
+	}
+	
+	@GetMapping("getdatabyend_year/{end_year}")
+	public List<DataTest> getDataByEndYear(@PathVariable ("end_year") Integer endYear) {
+		return datatest.getDataByEndYear(endYear);
+	}
+	
+	@GetMapping("getdatabyend_year/{end_year}")
+	public List<DataTest> getDataByEndYear(@PathVariable ("end_year") Integer endYear) {
+		return datatest.getDataByEndYear(endYear);
+	}
+	
+	
+}
